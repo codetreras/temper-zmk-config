@@ -82,7 +82,7 @@ layers:
     - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ⌘
   nav:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
