@@ -1,10 +1,10 @@
 layers:
   default:
-  - - Q
+  - - BT CLR ALL
     - W
     - F
     - P
-    - B
+    - OUT TOG
     - J
     - L
     - U
