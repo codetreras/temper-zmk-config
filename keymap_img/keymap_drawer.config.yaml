@@ -196,8 +196,8 @@ parse_config:
     '&ltog LGUI 7': {t: "Cancel\nSym", h: '⌘'}
     '&ltog LGUI 8': {t: "Cancel\nFunc", h: '⌘'}
     '&ltog LGUI 9': {t: "Cancel\nAdjust", h: '⌘'}
-    '&tilde_n': {t: "ñ", h: ';', s: 'double-tap'}
-    '&switcher': {t: "⌘↹", h: '⌘`', s: 'double-tap'}
+    '&tilde_n': {t: "ñ", s: ';', h: 'double-tap'}
+    '&switcher': {t: "⌘↹", s: '⌘`', h: 'double-tap'}
   skip_binding_parsing: false
   zmk_keycode_map:
     AMPERSAND: '&'
