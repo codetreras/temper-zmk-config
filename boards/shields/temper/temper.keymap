@@ -28,8 +28,10 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             bindings
-                = <&kp TILDE>
-                , <&kp N>;
+                = <&macro_press &kp TILDE>
+                , <&macro_tap N>
+                , <&macro_release &kp TILDE>
+                ;
         };
         switch_app: switch_app {
             compatible = "zmk,behavior-macro";
@@ -46,7 +48,7 @@
             #binding-cells = <0>;
             bindings 
                 = <&macro_press &kp LGUI>
-                , <&kp GRAVE>
+                , <&macro_tap &kp GRAVE>
                 , <&macro_release &kp LGUI>
                 ;
         };
