@@ -29,7 +29,7 @@
             wait-ms = <10>;
             bindings
                 = <&macro_press &kp TILDE>
-                , <&macro_tap N>
+                , <&macro_tap &kp N>
                 , <&macro_release &kp TILDE>
                 ;
         };
