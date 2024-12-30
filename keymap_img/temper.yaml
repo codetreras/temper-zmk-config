@@ -1,35 +1,16 @@
 layers:
-  default:
-  - - Q
-    - W
-    - F
-    - P
-    - B
-    - J
-    - L
-    - U
-    - Y
-    - {t: '''', s: '"'}
-  - [A, R, S, T, G, M, N, E, I, O]
-  - - Z
-    - X
-    - C
-    - D
-    - V
-    - K
-    - H
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - {t: '?', s: '!'}
-  - - ⌘
-    - num
-    - {t: ⇧, s: ⇪}
-    - SPACE
-    - nav
-    - {t: BACKSPACE, s: Alt+ BACKSPACE}
   qwerty:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - [A, S, D, F, G, H, J, K, L, '&tilde_n']
+  - - A
+    - S
+    - D
+    - F
+    - G
+    - H
+    - J
+    - K
+    - L
+    - {t: ñ, h: ;, s: double-tap}
   - - Z
     - X
     - C
@@ -40,12 +21,12 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - ⌘
+    - nav
+    - {t: ⇧, s: ⇪}
+    - SPACE
+    - num
+    - {t: BACKSPACE, s: Alt+ BACKSPACE}
   num:
   - - '~'
     - '@'
@@ -69,13 +50,13 @@ layers:
     - '3'
     - {t: '=', s: +}
   - - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
     - '0'
     - {t: ▽, type: trans}
-    - ⌘
+    - {type: held}
+    - {t: ▽, type: trans}
   nav:
-  - - {t: ▽, type: trans}
+  - - ESC
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -85,7 +66,7 @@ layers:
     - END
     - ↹
     - {t: BACKSPACE, s: Alt+ BACKSPACE}
-  - - {t: ⇧, h: sticky}
+  - - {t: ⌘↹, h: ⌘`, s: double-tap}
     - {t: ⌃, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌘, h: sticky}
@@ -106,13 +87,13 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   fun:
-  - - {t: qwerty, h: toggle}
+  - - {t: ▽, type: trans}
     - MUTE
     - VOL DN
     - VOL UP
