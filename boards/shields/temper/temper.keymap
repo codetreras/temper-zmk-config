@@ -24,6 +24,14 @@
         };
     };
     behaviors {
+        tilde_n: tilde_n {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp SEMI>, <&kp TILDE><&kp N>;
+        };
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
