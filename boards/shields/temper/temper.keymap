@@ -137,11 +137,11 @@
                 nav_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-// │     ESC     │             │             │             │             │   │             │     HOME    │     END     │     TAB     │  BACKSPACE  │
-        &kp ESC      &trans        &trans        &trans        &trans            &trans       &kp HOME      &kp END       &kp TAB     &super_bspc
+// │  SWITCH APP │             │             │             │             │   │             │     HOME    │     END     │     TAB     │  BACKSPACE  │
+       &switcher      &trans        &trans        &trans        &trans            &trans       &kp HOME      &kp END       &kp TAB     &super_bspc
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-// │  SWITCH APP │    CTRL     │     ALT     │    GUI      │     TAB     │   │      <--    │     DOWN    │     UP     │     -->      │    ESC  `   │
-      &switcher     &sk LCTRL      &sk LALT      &sk LGUI      &kp TAB           &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT       &gresc
+// │    SHIFT    │    CTRL     │     ALT     │    GUI      │     TAB     │   │      <--    │     DOWN    │     UP     │     -->      │    ESC  `   │
+      &sk LSHFT    &sk LCTRL      &sk LALT      &sk LGUI      &kp TAB           &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT       &gresc
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 // │             │     DEL     │             │             │             │   │             │   RETURN    │             │             │             │
         &trans       &kp DEL        &trans        &trans        &trans            &trans        &kp RET       &trans        &trans        &trans
