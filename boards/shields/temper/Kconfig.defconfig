@@ -8,9 +8,25 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+if SHIELD_TEMPER_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif
+
 if SHIELD_TEMPER_LEFT || SHIELD_TEMPER_RIGHT
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_SLEEP 
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY 
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING 
     default y
 
 endif
