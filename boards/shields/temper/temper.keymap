@@ -68,7 +68,7 @@
             tapping-term-ms = <200>;
             bindings = 
                 <&enye>,
-                <&mo RIGHT_SHIFT SEMI>;
+                <&mt RIGHT_SHIFT SEMI>;
         };
 
         switcher: switcher {
