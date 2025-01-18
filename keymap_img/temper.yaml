@@ -1,6 +1,6 @@
 layers:
   qwerty:
-  - [Q, W, E, R, T, Y, U, I, O, P]
+  - [Q, W, E, R, T, Y, U, I, O, '&p_apos']
   - - {t: A, h: LEFT SHIFT}
     - {t: S, h: ⌃}
     - {t: D, h: ⎇}
