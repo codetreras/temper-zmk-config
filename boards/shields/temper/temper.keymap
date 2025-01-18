@@ -62,6 +62,15 @@
     };
 
     behaviors {
+        p_apos: p_apos {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = 
+                <&kp P>,
+                <&kp APOS>;
+        };
+
         enye_shift_semi: enye_shift_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -125,7 +134,7 @@
 
         qwerty_layer {
             bindings = <
-&kp Q             &kp W        &kp E           &kp R           &kp T          &kp Y      &kp U            &kp I            &kp O                &kp P
+&kp Q             &kp W        &kp E           &kp R           &kp T          &kp Y      &kp U            &kp I            &kp O                &p_apos
 &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G          &kp H      &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RIGHT_CONTROL L  &enye_shift_semi
 &kp Z             &kp X        &kp C           &kp V           &kp B          &kp N      &kp M            &kp COMMA        &kp DOT              &kp FSLH
                                &kp LGUI        &mo NAV         &smart_shft    &kp SPACE  &mo NUM          &super_bspc
