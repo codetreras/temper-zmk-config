@@ -12,9 +12,9 @@ layers:
     - {t: L, h: ⌃}
     - '&enye_shift_semi'
   - - Z
-    - X
-    - C
-    - V
+    - '&td_cut'
+    - '&td_copy'
+    - '&td_paste'
     - B
     - N
     - M
@@ -38,13 +38,22 @@ layers:
     - '8'
     - '9'
     - {t: '-', s: _}
-  - [^, '#', (, ), $, _, '4', '5', '6', +]
-  - - {t: '&', s: '|'}
+  - - {t: ^, h: LEFT SHIFT}
+    - {t: '#', h: ⌃}
+    - {t: (, h: ⎇}
+    - {t: ), h: ⌘}
+    - $
+    - _
+    - {t: '4', h: ⌘}
+    - {t: '5', h: ⎇}
+    - {t: '6', h: ⌃}
+    - {t: +, h: RIGHT SHIFT}
+  - - {t: ▽, type: trans}
     - <
     - {t: '[', s: '{'}
     - {t: ']', s: '}'}
     - '>'
-    - {t: /, s: \}
+    - {t: ▽, type: trans}
     - '1'
     - '2'
     - '3'
@@ -56,10 +65,10 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
   nav:
-  - - {t: ⌘↹, h: double-tap, s: ⌘`}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - '&swap_app'
+    - '&swap_window'
+    - '&tab_left'
+    - '&tab_right'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - HOME
