@@ -67,6 +67,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -74,6 +75,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>;
+
             mods = <(MOD_LSFT)>;
         };
     };
@@ -83,9 +85,9 @@
 
         qwerty_layer {
             bindings = <
-&kp Q  &kp W  &kp E     &kp R  &kp T         &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D     &kp F  &kp G         &kp H      &kp J  &kp K      &kp L    &enye
-&kp Z  &kp X  &kp C     &kp V  &kp B         &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp Q  &kp W  &kp E     &kp R    &kp T         &kp Y      &kp U    &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D     &kp F    &kp G         &kp H      &kp J    &kp K      &kp L    &enye
+&kp Z  &kp X  &kp C     &kp V    &kp B         &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH
               &kp LGUI  &mo NAV  &kp LSHIFT    &kp SPACE  &mo SYM  &kp BSPC
             >;
         };
@@ -95,16 +97,16 @@
 &swap_app   &swap_window  &none       &none       &kp C_VOL_UP    &trans     &kp HOME   &kp END    &kp TAB    &super_bspc
 &sk LSHIFT  &sk LCTRL     &sk LALT    &sk LGUI    &kp C_VOL_DN    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
 &kp SPACE   &kp SPACE     &kp C_PREV  &kp C_NEXT  &kp C_PP        &none      &kp PG_DN  &kp PG_UP  &none      &kp RET
-                          &kp LGUI    &mo NAV       &kp LSHIFT      &kp SPACE  &mo SYM      &kp BSPC
+                          &kp LGUI    &mo NAV     &kp LSHIFT      &kp SPACE  &mo SYM    &kp BSPC
             >;
         };
 
         sym_layer {
             bindings = <
-&kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp TILDE      &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT   &kp GRAVE
+&kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp APOS       &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT   &kp GRAVE
 &kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR       &kp HASH   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT
 &kp PLUS  &kp PIPE   &kp AT    &kp FSLH   &kp PERCENT    &kp L      &kp BSLH  &kp AMPS  &kp QMARK  &kp EXCL
-                     &kp LGUI  &mo NAV      &kp LSHIFT     &kp SPACE  &mo SYM     &kp BSPC
+                     &kp LGUI  &mo NAV    &kp LSHIFT     &kp SPACE  &mo SYM   &kp BSPC
             >;
         };
 
@@ -113,7 +115,7 @@
 &kp N1      &kp N2     &kp N3    &kp N4    &kp N5        &kp N6     &kp N7    &kp N8    &kp N9     &kp N0
 &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp F6        &kp F7     &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT
 &kp F1      &kp F2     &kp F3    &kp F4    &kp F5        &kp F8     &kp F9    &kp F10   &kp F11    &kp F12
-                       &kp LGUI  &mo NAV     &kp LSHIFT    &kp SPACE  &mo SYM     &kp BSPC
+                       &kp LGUI  &mo NAV   &kp LSHIFT    &kp SPACE  &mo SYM   &kp BSPC
             >;
         };
     };
