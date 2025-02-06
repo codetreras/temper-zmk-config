@@ -24,7 +24,16 @@ layers:
     - END
     - ↹
     - {t: BACKSPACE, s: Alt+BACKSPACE}
-  - [LSHIFT, ⌃, ⎇, ⌘, VOL DN, ←, ↓, ↑, →, BSPC]
+  - - {t: LSHIFT, h: sticky}
+    - {t: ⌃, h: sticky}
+    - {t: ⎇, h: sticky}
+    - {t: ⌘, h: sticky}
+    - VOL DN
+    - ←
+    - ↓
+    - ↑
+    - →
+    - BSPC
   - [SPACE, SPACE, PREV, NEXT, PP, '', PG DN, PG UP, '', RET]
   - - ⌘
     - {t: nav, type: held}
@@ -49,10 +58,10 @@ layers:
     - {t: '=', s: +}
     - $
     - '#'
-    - ⌘
-    - ⎇
-    - ⌃
-    - LSHIFT
+    - {t: ⌘, h: sticky}
+    - {t: ⎇, h: sticky}
+    - {t: ⌃, h: sticky}
+    - {t: LSHIFT, h: sticky}
   - [+, '|', '@', /, '%', L, \, '&', '?', '!']
   - - ⌘
     - nav
