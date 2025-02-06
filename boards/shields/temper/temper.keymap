@@ -5,22 +5,20 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define QWERTY 0
-#define NUM 1
-#define NAV 2
-#define FUN 3
+#define NAV 1
+#define SYM 2
+#define NUM 3
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <NAV SYM>;
+            then-layer = <NUM>;
         };
     };
 
@@ -55,20 +53,6 @@
                 <&macro_release>,
                 <&kp LGUI>;
         };
-
-        tab_left: tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            label = "Tab Left";
-            bindings = <&kp LGUI &kp LALT &kp LEFT_ARROW>;
-        };
-
-        tab_right: tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            label = "Tab Right";
-            bindings = <&kp LGUI &kp LALT &kp RIGHT_ARROW>;
-        };
     };
 
     behaviors {
@@ -79,39 +63,10 @@
             bindings = <&kp P>, <&kp APOS>;
         };
 
-        enye_shift_semi: enye_shift_semi {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt RIGHT_SHIFT &enye>, <&kp SEMI>;
-        };
-
-        td_copy: td_copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "C - Copy";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LG(C)>;
-        };
-
-        td_cut: td_cut {
-            compatible = "zmk,behavior-tap-dance";
-            label = "X - Cut";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&kp LG(X)>;
-        };
-
-        td_paste: td_paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "V - Paste";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LG(V)>;
-        };
-
         super_bspc: super_backspace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -119,7 +74,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>;
-
             mods = <(MOD_LSFT)>;
         };
     };
@@ -129,37 +83,37 @@
 
         qwerty_layer {
             bindings = <
-&kp Q             &kp W        &kp E           &kp R           &kp T          &kp Y      &kp U            &kp I            &kp O                &p_apos
-&mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G          &kp H      &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RIGHT_CONTROL L  &enye_shift_semi
-&kp Z             &td_cut      &td_copy        &td_paste       &kp B          &kp N      &kp M            &kp COMMA        &kp DOT              &kp FSLH
-                               &kp LGUI        &mo 2           &smart_shft    &kp SPACE  &mo 1            &super_bspc
-            >;
-        };
-
-        num_layer {
-            bindings = <
-&kp TILDE             &kp AT          &kp LBRC           &kp RBRC           &kp PRCNT    &kp STAR   &kp N7            &kp N8            &kp N9                &kp MINUS
-&mt LEFT_SHIFT CARET  &mt LCTRL HASH  &mt LEFT_ALT LPAR  &mt LEFT_GUI RPAR  &kp DLLR     &kp UNDER  &mt RIGHT_GUI N4  &mt RIGHT_ALT N5  &mt RIGHT_CONTROL N6  &mt RIGHT_SHIFT PLUS
-&trans                &kp LT          &kp LBKT           &kp RBKT           &kp GT       &trans     &kp N1            &kp N2            &kp N3                &kp EQUAL
-                                      &trans             &trans             &kp N0       &trans     &trans            &trans
+&kp Q  &kp W  &kp E     &kp R  &kp T         &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D     &kp F  &kp G         &kp H      &kp J  &kp K      &kp L    &enye
+&kp Z  &kp X  &kp C     &kp V  &kp B         &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+              &kp LGUI  &mo NAV  &kp LSHIFT    &kp SPACE  &mo SYM  &kp BSPC
             >;
         };
 
         nav_layer {
             bindings = <
-&swap_app  &swap_window  &tab_left  &tab_right  &trans     &trans    &kp HOME  &kp END  &kp TAB    &super_bspc
-&sk LSHFT  &sk LCTRL     &sk LALT   &sk LGUI    &kp TAB    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &gresc
-&trans     &kp DEL       &trans     &trans      &trans     &trans    &kp RET   &trans   &trans     &trans
-                         &trans     &trans      &trans     &trans    &trans    &trans
+&swap_app   &swap_window  &none       &none       &kp C_VOL_UP    &trans     &kp HOME   &kp END    &kp TAB    &super_bspc
+&kp LSHIFT  &kp LCTRL     &kp LALT    &kp LGUI    &kp C_VOL_DN    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&kp SPACE   &kp SPACE     &kp C_PREV  &kp C_NEXT  &kp C_PP        &none      &kp PG_DN  &kp PG_UP  &none      &kp RET
+                          &kp LGUI    &mo NAV       &kp LSHIFT      &kp SPACE  &mo SYM      &kp BSPC
             >;
         };
 
-        fun_layer {
+        sym_layer {
             bindings = <
-&trans        &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_CLR    &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F10
-                            &trans        &trans        &trans          &trans  &trans  &trans
+&kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp TILDE      &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT   &kp GRAVE
+&kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR       &kp HASH   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT
+&kp PLUS  &kp PIPE   &kp AT    &kp FSLH   &kp PERCENT    &kp L      &kp BSLH  &kp AMPS  &kp QMARK  &kp EXCL
+                     &kp LGUI  &mo NAV      &kp LSHIFT     &kp SPACE  &mo SYM     &kp BSPC
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&kp N1      &kp N2     &kp N3    &kp N4    &kp N5        &kp N6     &kp N7    &kp N8    &kp N9     &kp N0
+&kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp F6        &kp F7     &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT
+&kp F1      &kp F2     &kp F3    &kp F4    &kp F5        &kp F8     &kp F9    &kp F10   &kp F11    &kp F12
+                       &kp LGUI  &mo NAV     &kp LSHIFT    &kp SPACE  &mo SYM     &kp BSPC
             >;
         };
     };
