@@ -93,7 +93,7 @@
         nav_layer {
             bindings = <
 &swap_app   &swap_window  &none       &none       &kp C_VOL_UP    &trans     &kp HOME   &kp END    &kp TAB    &super_bspc
-&kp LSHIFT  &kp LCTRL     &kp LALT    &kp LGUI    &kp C_VOL_DN    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&sk LSHIFT  &sk LCTRL     &sk LALT    &sk LGUI    &kp C_VOL_DN    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
 &kp SPACE   &kp SPACE     &kp C_PREV  &kp C_NEXT  &kp C_PP        &none      &kp PG_DN  &kp PG_UP  &none      &kp RET
                           &kp LGUI    &mo NAV       &kp LSHIFT      &kp SPACE  &mo SYM      &kp BSPC
             >;
@@ -102,7 +102,7 @@
         sym_layer {
             bindings = <
 &kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp TILDE      &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT   &kp GRAVE
-&kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR       &kp HASH   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT
+&kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR       &kp HASH   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT
 &kp PLUS  &kp PIPE   &kp AT    &kp FSLH   &kp PERCENT    &kp L      &kp BSLH  &kp AMPS  &kp QMARK  &kp EXCL
                      &kp LGUI  &mo NAV      &kp LSHIFT     &kp SPACE  &mo SYM     &kp BSPC
             >;
