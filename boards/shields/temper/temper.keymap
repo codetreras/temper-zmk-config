@@ -63,6 +63,15 @@
             bindings = <&kp P>, <&kp APOS>;
         };
 
+        dt-mayus:
+
+        td_shift_caps: tap-dance-shift-mayus {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
+
         super_bspc: super_backspace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -85,37 +94,37 @@
 
         qwerty_layer {
             bindings = <
-&kp Q  &kp W  &kp E     &kp R    &kp T         &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D     &kp F    &kp G         &kp H      &kp J    &kp K      &kp L    &enye
-&kp Z  &kp X  &kp C     &kp V    &kp B         &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH
-              &kp LGUI  &mo NAV  &kp LSHIFT    &kp SPACE  &mo SYM  &kp BSPC
+&kp Q  &kp W  &kp E     &kp R    &kp T             &kp Y      &kp U    &kp I        &kp O    &kp P
+&kp A  &kp S  &kp D     &kp F    &kp G             &kp H      &kp J    &kp K        &kp L    &enye
+&kp Z  &kp X  &kp C     &kp V    &kp B             &kp N      &kp M    &kp COMMA    &kp DOT  &kp FSLH
+              &kp LGUI  &mo NAV  &td_shift_caps    &kp SPACE  &mo SYM  &super_bspc
             >;
         };
 
         nav_layer {
             bindings = <
-&swap_app   &swap_window  &none       &none       &kp C_VOL_UP    &trans     &kp HOME   &kp END    &kp TAB    &super_bspc
-&sk LSHIFT  &sk LCTRL     &sk LALT    &sk LGUI    &kp C_VOL_DN    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
-&kp SPACE   &kp SPACE     &kp C_PREV  &kp C_NEXT  &kp C_PP        &none      &kp PG_DN  &kp PG_UP  &none      &kp RET
-                          &kp LGUI    &mo NAV     &kp LSHIFT      &kp SPACE  &mo SYM    &kp BSPC
+&swap_app       &swap_window  &none       &none       &kp C_VOL_UP      &trans     &kp HOME   &kp END      &kp TAB    &super_bspc
+&sk LEFT_SHIFT  &sk LCTRL     &sk LALT    &sk LGUI    &kp C_VOL_DN      &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT  &kp BSPC
+&kp SPACE       &kp SPACE     &kp C_PREV  &kp C_NEXT  &kp C_PP          &none      &kp PG_DN  &kp PG_UP    &none      &kp RET
+                              &kp LGUI    &mo NAV     &td_shift_caps    &kp SPACE  &mo SYM    &super_bspc
             >;
         };
 
         sym_layer {
             bindings = <
-&kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp APOS       &kp CARET  &kp RPAR  &kp RBRC  &kp RBKT   &kp GRAVE
-&kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR       &kp SEMI   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT
-&kp HASH  &kp PIPE   &kp AT    &kp FSLH   &kp PERCENT    &kp L      &kp BSLH  &kp AMPS  &kp QMARK  &kp EXCL
-                     &kp LGUI  &mo NAV    &kp LSHIFT     &kp SPACE  &mo SYM   &kp BSPC
+&kp ESC   &kp LBKT   &kp LBRC  &kp LPAR   &kp APOS          &kp CARET  &kp RPAR  &kp RBRC     &kp RBKT   &kp GRAVE
+&kp PLUS  &kp MINUS  &kp STAR  &kp EQUAL  &kp DLLR          &kp SEMI   &sk LGUI  &sk LALT     &sk LCTRL  &sk LEFT_SHIFT
+&kp HASH  &kp PIPE   &kp AT    &kp FSLH   &kp PERCENT       &kp L      &kp BSLH  &kp AMPS     &kp QMARK  &kp EXCL
+                     &kp LGUI  &mo NAV    &td_shift_caps    &kp SPACE  &mo SYM   &super_bspc
             >;
         };
 
         num_layer {
             bindings = <
-&kp N1      &kp N2     &kp N3    &kp N4    &kp N5        &kp N6     &kp N7    &kp N8    &kp N9     &kp N0
-&kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp F6        &kp F7     &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT
-&kp F1      &kp F2     &kp F3    &kp F4    &kp F5        &kp F8     &kp F9    &kp F10   &kp F11    &kp F12
-                       &kp LGUI  &mo NAV   &kp LSHIFT    &kp SPACE  &mo SYM   &kp BSPC
+&kp N1          &kp N2     &kp N3    &kp N4    &kp N5            &kp N6     &kp N7    &kp N8       &kp N9     &kp N0
+&sk LEFT_SHIFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp F6            &kp F7     &sk LGUI  &sk LALT     &sk LCTRL  &sk LEFT_SHIFT
+&kp F1          &kp F2     &kp F3    &kp F4    &kp F5            &kp F8     &kp F9    &kp F10      &kp F11    &kp F12
+                           &kp LGUI  &mo NAV   &td_shift_caps    &kp SPACE  &mo SYM   &super_bspc
             >;
         };
     };
