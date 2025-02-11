@@ -178,7 +178,6 @@ parse_config:
     '&mm_1_cut': '1'
     '&mm_2_copy': '2'
     '&mm_5_save': '5'
-    '&swapper_cmd_tab': {t: '⌘↹'}
     '&td_at_email': {t: '@'}
     '&num_word': 'NUM'
     '&nav_word': 'NAV'
@@ -196,8 +195,10 @@ parse_config:
     '&ltog LGUI 7': {t: "Cancel\nSym", h: '⌘'}
     '&ltog LGUI 8': {t: "Cancel\nFunc", h: '⌘'}
     '&ltog LGUI 9': {t: "Cancel\nAdjust", h: '⌘'}
-    '&tilde_n': {t: "ñ", s: ';', h: 'double-tap'}
-    '&switcher': {t: "⌘↹", s: '⌘`', h: 'double-tap'}
+    '&tilde_n': {t: "ñ"}
+    '&swap_app': {t: "⌘↹"}
+    '&swap_window': {t: '⌘`'}
+    '&super_bspc': {t: "⌫", s: '⎇⌫'}
   skip_binding_parsing: false
   zmk_keycode_map:
     AMPERSAND: '&'
@@ -210,6 +211,8 @@ parse_config:
     AT_SIGN: '@'
     BACKSLASH: {t: '\', s: '|'}
     BSLH: \
+    BSPC: '⌫'
+    CAPSLOCK: '⇪'
     CARET: ^
     COLON: ':'
     COMMA: {t: ',', s: '<'}
@@ -258,6 +261,7 @@ parse_config:
     SEMICOLON:  {t: ';', s: ':'}
     SINGLE_QUOTE:  {t: '''', s: '"'}
     SLASH: {t: '/', s: '?'}
+    SPACE: ⎵
     SQT: ''''
     STAR: '*'
     TILDE: '~'
@@ -286,13 +290,15 @@ parse_config:
     DOWN: ↓
     TAB: ↹
     RETURN: '⏎'
+    RET: '⏎'
+    ESC: '⎋'
     ESCAPE: '⎋'
-    C_REWIND: '⏮'
-    C_FAST_FORWARD: '⏭'
-    C_PAUSE: '⏯'
+    C_PREV: '⏮'
+    C_NEXT: '⏭'
+    C_PP: '⏯'
     C_MUTE: "VOL\nMUTE"
-    C_VOLUME_DOWN: "VOL\nDOWN"
-    C_VOLUME_UP: "VOL\nUP"
+    C_VOL_DN: "VOL\nDOWN"
+    C_VOL_UP: "VOL\nUP"
     C_BRIGHTNESS_DEC: '☀↓'
     C_BRIGHTNESS_INC: '☀↑'
     LA(LEFT): ↞
