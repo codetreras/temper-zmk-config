@@ -63,8 +63,6 @@
             bindings = <&kp P>, <&kp APOS>;
         };
 
-        dt-mayus:
-
         td_shift_caps: tap-dance-shift-mayus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
