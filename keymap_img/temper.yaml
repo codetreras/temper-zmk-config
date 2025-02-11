@@ -1,7 +1,7 @@
 layers:
   qwerty:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - [A, S, D, F, G, H, J, K, L, '&enye']
+  - [A, S, D, F, G, H, J, K, L, ñ]
   - - Z
     - X
     - C
@@ -14,40 +14,44 @@ layers:
     - /
   - - ⌘
     - nav
-    - '&td_shift_caps'
-    - SPACE
+    - ⇧
+    - ⎵
     - sym
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
+    - {t: ⌫, s: ⎇⌫}
   nav:
-  - - '&swap_app'
-    - '&swap_window'
+  - - ⌘↹
+    - ⌘`
     - ''
     - ''
-    - VOL UP
-    - {t: ▽, type: trans}
+    - 'VOL
+
+      UP'
+    - ⇪
     - HOME
     - END
     - ↹
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
+    - {t: ⌫, s: ⎇⌫}
   - - {t: LEFT SHIFT, h: sticky}
     - {t: ⌃, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌘, h: sticky}
-    - VOL DN
+    - 'VOL
+
+      DOWN'
     - ←
     - ↓
     - ↑
     - →
-    - BSPC
-  - [SPACE, SPACE, PREV, NEXT, PP, '', PG DN, PG UP, '', RET]
+    - ⌫
+  - [⎵, ⎵, ⏮, ⏭, ⏯, '', PG DN, PG UP, '', ⏎]
   - - ⌘
     - {t: nav, type: held}
-    - '&td_shift_caps'
-    - SPACE
+    - ⇧
+    - ⎵
     - sym
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
+    - {t: ⌫, s: ⎇⌫}
   sym:
-  - - ESC
+  - - ⎋
     - {t: '[', s: '{'}
     - '{'
     - (
@@ -70,10 +74,10 @@ layers:
   - ['#', '|', '@', /, '%', L, \, '&', '?', '!']
   - - ⌘
     - nav
-    - '&td_shift_caps'
-    - SPACE
+    - ⇧
+    - ⎵
     - {t: sym, type: held}
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
+    - {t: ⌫, s: ⎇⌫}
   num:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   - - {t: LEFT SHIFT, h: sticky}
@@ -89,7 +93,7 @@ layers:
   - [F1, F2, F3, F4, F5, F8, F9, F10, F11, F12]
   - - ⌘
     - {t: nav, type: held}
-    - '&td_shift_caps'
-    - SPACE
+    - ⇧
+    - ⎵
     - {t: sym, type: held}
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
+    - {t: ⌫, s: ⎇⌫}
