@@ -31,7 +31,7 @@ layers:
     - END
     - ↹
     - {t: ⌫, s: ⎇⌫}
-  - - {t: LEFT SHIFT, h: sticky}
+  - - {t: ⇧, h: sticky}
     - {t: ⌃, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌘, h: sticky}
@@ -43,7 +43,9 @@ layers:
     - ↑
     - →
     - ⌫
-  - [⎵, ⎵, ⏮, ⏭, ⏯, '', PG DN, PG UP, '', ⏎]
+  - [⎵, ⏮, PLAY PAUSE, ⏭, 'VOL
+
+      MUTE', '', PG DN, PG UP, '', ⏎]
   - - ⌘
     - {t: nav, type: held}
     - ⇧
@@ -70,8 +72,8 @@ layers:
     - {t: ⌘, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌃, h: sticky}
-    - {t: LEFT SHIFT, h: sticky}
-  - ['#', '|', '@', /, '%', L, \, '&', '?', '!']
+    - {t: ⇧, h: sticky}
+  - ['#', '|', '@', /, '%', '~', \, '&', '?', '!']
   - - ⌘
     - nav
     - ⇧
@@ -80,7 +82,7 @@ layers:
     - {t: ⌫, s: ⎇⌫}
   num:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-  - - {t: LEFT SHIFT, h: sticky}
+  - - {t: ⇧, h: sticky}
     - {t: ⌃, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌘, h: sticky}
@@ -89,7 +91,7 @@ layers:
     - {t: ⌘, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌃, h: sticky}
-    - {t: LEFT SHIFT, h: sticky}
+    - {t: ⇧, h: sticky}
   - [F1, F2, F3, F4, F5, F8, F9, F10, F11, F12]
   - - ⌘
     - {t: nav, type: held}
