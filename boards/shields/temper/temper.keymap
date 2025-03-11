@@ -56,11 +56,11 @@
     };
 
     behaviors {
-        p_apos: p_apos {
+        tn_apos_td: tilde_n_apos {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp P>, <&kp APOS>;
+            bindings = <&tilde_n>, <&kp APOS>;
         };
 
         super_bspc: super_backspace {
@@ -78,7 +78,7 @@
         qwerty_layer {
             bindings = <
 &kp Q  &kp W  &kp E     &kp R    &kp T        &kp Y      &kp U    &kp I        &kp O    &kp P
-&kp A  &kp S  &kp D     &kp F    &kp G        &kp H      &kp J    &kp K        &kp L    &tilde_n
+&kp A  &kp S  &kp D     &kp F    &kp G        &kp H      &kp J    &kp K        &kp L    &tn_apos_td
 &kp Z  &kp X  &kp C     &kp V    &kp B        &kp N      &kp M    &kp COMMA    &kp DOT  &kp FSLH
               &kp LGUI  &mo NAV  &kp LSHFT    &kp SPACE  &mo SYM  &super_bspc
             >;

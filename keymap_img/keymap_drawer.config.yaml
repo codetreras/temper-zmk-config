@@ -199,6 +199,7 @@ parse_config:
     '&swap_app': {t: "⌘↹"}
     '&swap_window': {t: '⌘`'}
     '&super_bspc': {t: "⌫", s: '⎇⌫'}
+    'tn_apos_td': {t: "ñ", s: "'"}
   skip_binding_parsing: false
   zmk_keycode_map:
     AMPERSAND: '&'
