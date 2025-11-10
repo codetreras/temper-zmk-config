@@ -89,10 +89,10 @@ layers:
     - {t: ⌘, h: sticky}
     - F6
     - F7
-    - BT CLR ALL
+    - {t: ⌘, h: sticky}
     - {t: ⎇, h: sticky}
     - {t: ⌃, h: sticky}
-    - {t: ⇧, h: sticky}
+    - BT CLR ALL
   - [F1, F2, F3, F4, F5, F8, F9, F10, F11, F12]
   - - ⌘
     - {t: nav, type: held}
