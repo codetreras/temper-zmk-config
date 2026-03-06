@@ -103,7 +103,7 @@ layers:
   bt:
   - - ''
     - ''
-    - ''
+    - {t: BT, type: held}
     - ''
     - ''
     - {t: BT, h: '0'}
@@ -123,7 +123,7 @@ layers:
     - {t: BT DISC, h: '0'}
     - BT CLR ALL
   - - ⌘
-    - nav
+    - {t: nav, type: held}
     - ⇧
     - ⎵
     - sym
