@@ -53,6 +53,34 @@ layers:
     - ⎵
     - sym
     - {t: ⌫, s: ⎇⌫}
+  bt:
+  - - ''
+    - ''
+    - {t: BT, type: held}
+    - ''
+    - ''
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+  - ['', '', '', '', '', OUT USB, OUT BLE, OUT TOG, '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - BT CLR
+    - BT NXT
+    - BT PRV
+    - {t: BT DISC, h: '0'}
+    - BT CLR ALL
+  - - ⌘
+    - {t: nav, type: held}
+    - ⇧
+    - ⎵
+    - sym
+    - {t: ⌫, s: ⎇⌫}
   sym:
   - - ⎋
     - {t: '[', s: '{'}
@@ -99,32 +127,4 @@ layers:
     - ⇧
     - ⎵
     - {t: sym, type: held}
-    - {t: ⌫, s: ⎇⌫}
-  bt:
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-  - ['', '', '', '', '', OUT USB, OUT BLE, OUT TOG, '', '']
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - BT CLR
-    - BT NXT
-    - BT PRV
-    - {t: BT DISC, h: '0'}
-    - BT CLR ALL
-  - - ⌘
-    - nav
-    - ⇧
-    - ⎵
-    - sym
     - {t: ⌫, s: ⎇⌫}
