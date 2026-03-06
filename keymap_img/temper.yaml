@@ -111,7 +111,7 @@ layers:
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
     - {t: BT, h: '4'}
-  - ['', '', '', '', '0', OUT USB, OUT BLE, OUT TOG, '', '']
+  - ['', '', '', '', '', OUT USB, OUT BLE, OUT TOG, '', '']
   - - ''
     - ''
     - ''
