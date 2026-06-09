@@ -122,7 +122,7 @@
 &kp TAB    &kp Q  &kp W  &kp E    &kp R        &kp N1     &kp N2  &kp N3  &kp N4  &kp N5
 &kp LSHFT  &kp A  &kp S  &kp D    &kp F        &kp N6     &kp N7  &kp N8  &kp N9  &kp N0
 &kp LCTRL  &kp Z  &kp X  &kp C    &kp V        &none      &none   &none   &none   &none
-                  &kp ESC  &mo NAV  &kp SPACE    &kp ENTER  &none   &none
+                  &kp ESC  &mo NAV  &kp SPACE    &kp SPACE  &kp ENTER   &tog GAME
             >;
         };
     };
