@@ -83,10 +83,10 @@
 
         nav_layer {
             bindings = <
-&swap_app  &swap_window  &mo BT            &tog GAME   &kp C_VOL_UP    &kp CAPSLOCK  &kp HOME   &kp END      &kp TAB    &super_bspc
+&swap_app  &swap_window  &mo BT            &tog GAME   &kp C_VOL_UP    &kp CAPSLOCK  &kp HOME   &kp END      &kp TAB    &kp RET
 &sk LSHFT  &sk LCTRL     &sk LALT          &sk LGUI    &kp C_VOL_DN    &kp LEFT      &kp DOWN   &kp UP       &kp RIGHT  &kp BSPC
-&kp SPACE  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE      &none         &kp PG_DN  &kp PG_UP    &none      &kp RET
-                         &kp LGUI          &mo NAV     &kp LSHFT       &kp SPACE     &mo SYM    &super_bspc
+&kp SPACE  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE      &none         &kp PG_DN  &kp PG_UP    &none      &none
+                         &kp LGUI          &mo NAV     &kp LSHFT       &kp SPACE     &mo SYM    &kp RET
             >;
         };
 
