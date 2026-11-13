@@ -31,7 +31,7 @@ layers:
     - HOME
     - END
     - ↹
-    - {t: ⌫, s: ⎇⌫}
+    - ⏎
   - - {t: ⇧, h: sticky}
     - {t: ⌃, h: sticky}
     - {t: ⎇, h: sticky}
@@ -46,13 +46,13 @@ layers:
     - ⌫
   - [⎵, ⏮, PLAY PAUSE, ⏭, 'VOL
 
-      MUTE', '', PG DN, PG UP, '', ⏎]
+      MUTE', '', PG DN, PG UP, '', '']
   - - ⌘
     - {t: nav, type: held}
     - ⇧
     - ⎵
     - sym
-    - {t: ⌫, s: ⎇⌫}
+    - ⏎
   sym:
   - - ⎋
     - {t: '[', s: '{'}
